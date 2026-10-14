@@ -1,4 +1,5 @@
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>企业怎么用 AI 课程大纲</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -233,6 +234,72 @@ footer{margin-top:56px;padding-block:24px 40px;border-top:1px solid var(--line);
   .slot,.prep li{grid-template-columns:minmax(0,1fr)}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+/* 手机：窄屏，或触控设备横过来仍不到 1024。电脑宽屏保持上面的版式。 */
+@media (max-width:760px), (hover:none) and (pointer:coarse) and (max-width:1024px){
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{padding-bottom:env(safe-area-inset-bottom)}
+  .wrap{padding-inline:max(16px,env(safe-area-inset-left),env(safe-area-inset-right))}
+  .hero{padding-block:24px 16px;gap:10px}
+  .hero h1{font-size:34px;letter-spacing:.02em}
+  .thesis{align-items:flex-start}
+  h2{margin:28px 0 12px}
+  .panel-head{margin-top:20px}
+  .day{margin:24px 0 8px}
+
+  .bar{top:0;padding-top:env(safe-area-inset-top)}
+  .bar-in{flex-direction:column;align-items:stretch;gap:6px;padding-block:8px}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;gap:2px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs button{flex:0 0 auto;min-height:40px;padding:8px 12px;font-size:16px}
+  .ind{justify-content:space-between;font-size:16px}
+  .ind-ctl button{min-height:36px;padding:6px 16px;font-size:16px}
+
+  .versions,.path,.two,.tracks,.rules,.tiers,.before-cols,.gl{grid-template-columns:minmax(0,1fr)}
+  .path li::after{content:none!important}
+  .ver,.box,.before{padding:16px}
+  .go{width:100%;min-height:44px;text-align:center}
+  .box dl{grid-template-columns:minmax(0,1fr);gap:2px 0}
+  .box dt{margin-top:12px}
+  .box dt:first-child{margin-top:0}
+
+  .strip-wrap{overflow:visible;margin-top:16px}
+  .strip,.strip.short{flex-direction:column;min-width:0;min-height:0;gap:6px}
+  .seg{flex:none;min-width:0;min-height:0;flex-direction:row;align-items:center;gap:10px;padding:10px 12px}
+  .seg .t{flex:0 0 4.4em;font-size:15px}
+  .seg b{flex:1;min-width:0;font-size:16px;-webkit-line-clamp:3}
+  .seg .m{flex:0 0 auto;font-size:15px}
+  .seg.tiny{min-width:0;padding:8px 12px;justify-content:center}
+  .seg.tiny .t{writing-mode:horizontal-tb;flex:1;text-align:center;font-family:var(--f-body);font-size:16px}
+  .lunch{writing-mode:horizontal-tb;flex:none;width:100%;min-height:36px;padding:8px;letter-spacing:.16em;font-size:16px}
+  .seg.split{flex-direction:column;align-items:stretch;padding:0;gap:4px}
+  .half{white-space:normal;min-height:40px;font-size:16px;padding:8px 12px}
+
+  .slot,.prep li{grid-template-columns:minmax(0,1fr);gap:2px 0;padding-block:16px}
+  .slot-time{display:flex;align-items:baseline;gap:8px}
+  .slot-time small{display:inline}
+  .slot.is-break{display:flex;flex-direction:row;align-items:baseline;gap:12px;padding-block:12px}
+  .agenda{margin-top:20px}
+
+  .table-wrap{overflow:visible;border:0;background:transparent;border-radius:0}
+  table{min-width:0;font-size:16px}
+  thead{display:none}
+  tr{display:block;background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-bottom:12px;padding:12px 14px}
+  td{display:block;border:0;padding:8px 0 0;white-space:normal}
+  td:first-child{padding-top:0;font-size:17px}
+  td:nth-child(n+2)::before{display:block;margin-bottom:2px;font-size:16px;font-weight:500;color:var(--ink);background-image:linear-gradient(transparent 68%,color-mix(in srgb,var(--accent) 32%,transparent) 68%);background-size:100% 1.75em;background-repeat:repeat-y;width:fit-content}
+  td:nth-child(2)::before{content:"目标"}
+  td:nth-child(3)::before{content:"做什么"}
+  td:nth-child(4)::before{content:"交什么"}
+  td:nth-child(5)::before{content:"怎样算过关"}
+
+  .cloud{width:min(100vw - 24px,440px)}
+  .cloud i,.cloud .dot{display:none}
+  .cloud-body{max-height:min(68vh,480px);overflow:auto;border-radius:16px;padding:16px 16px 14px}
+  .cloud-close{width:36px;height:36px;line-height:36px;top:8px;right:8px}
+  .gl>div{scroll-margin-top:150px}
+  footer{margin-top:36px;padding-bottom:max(28px,env(safe-area-inset-bottom))}
+}
 </style>
 
 <header class="hero wrap">
@@ -240,7 +307,7 @@ footer{margin-top:56px;padding-block:24px 40px;border-top:1px solid var(--line);
   <h1>企业怎么用 AI</h1>
   <p class="lead">从每个人最想甩掉的那件活出发，当天做出能用的东西，课后陪跑 4 周，把第一个试点落地。三个版本，按需要选。</p>
   <div class="thesis"><span class="seal">人审</span><p>主线只有一条：AI 干流程活和初稿，人做审核、判断和签字。</p></div>
-  <p class="hint">读到带虚线的词，比如<button type="button" class="term" data-term="siwen" aria-expanded="false">四问</button>，鼠标停一下或点一下，就会弹出解释；全部名词汇总在「名词解释」页。</p>
+  <p class="hint">读到带虚线的词，比如<button type="button" class="term" data-term="siwen" aria-expanded="false">四问</button>，点一下就会弹出解释；全部名词汇总在「名词解释」页。</p>
 </header>
 
 <nav class="bar" aria-label="切换版本与行业">
@@ -1005,6 +1072,12 @@ footer{margin-top:56px;padding-block:24px 40px;border-top:1px solid var(--line);
     panels.forEach(function(p){ p.hidden = p.id !== id; });
     tabs.forEach(function(t){ t.setAttribute('aria-selected', t.dataset.tab === id ? 'true' : 'false'); });
     store('course-tab', id);
+    var current = document.querySelector('[data-tab="' + id + '"]');
+    if (current && current.parentElement && current.parentElement.scrollWidth > current.parentElement.clientWidth + 4) {
+      var scroller = current.parentElement;
+      var left = current.offsetLeft - (scroller.clientWidth - current.offsetWidth) / 2;
+      scroller.scrollTo({left:Math.max(0, left), behavior: fromUser ? 'smooth' : 'auto'});
+    }
     if (fromUser) {
       try { history.replaceState(null, '', '#' + id); } catch (e) {}
       var y = app.getBoundingClientRect().top + window.scrollY - bar.offsetHeight;
@@ -1161,18 +1234,29 @@ footer{margin-top:56px;padding-block:24px 40px;border-top:1px solid var(--line);
   var openTerm = null, pinned = false, showT = 0, hideT = 0, skipFocus = false;
   var canHover = !!(window.matchMedia && window.matchMedia('(hover: hover)').matches);
 
+  var phoneQ = window.matchMedia('(max-width: 760px), (hover: none) and (pointer: coarse) and (max-width: 1024px)');
   function place(btn){
     var r = btn.getBoundingClientRect();
     var vw = document.documentElement.clientWidth, vh = window.innerHeight;
     var w = cloud.offsetWidth, h = cloud.offsetHeight;
     var cx = r.left + r.width / 2;
-    var left = Math.min(Math.max(cx - 70, 16), Math.max(16, vw - w - 16));
-    var below = (vh - r.bottom) >= h + 72 || r.top < h + 72;
+    var phone = phoneQ.matches;
+    cloud.style.position = phone ? 'fixed' : 'absolute';
+    var left = Math.min(Math.max(phone ? cx - w / 2 : cx - 70, 12), Math.max(12, vw - w - 12));
+    var gap = phone ? 8 : 58;
+    var below = (vh - r.bottom) >= h + gap + 16 || r.top < h + gap + 16;
     cloud.classList.toggle('below', below);
     cloud.classList.toggle('above', !below);
-    var top = below ? r.bottom + 58 : r.top - h - 58;
-    cloud.style.left = (left + window.scrollX) + 'px';
-    cloud.style.top = (top + window.scrollY) + 'px';
+    var top = below ? r.bottom + gap : r.top - h - gap;
+    if (phone) {
+      if (top + h > vh - 8) top = Math.max(8, vh - h - 8);
+      if (top < 8) top = 8;
+      cloud.style.left = left + 'px';
+      cloud.style.top = top + 'px';
+    } else {
+      cloud.style.left = (left + window.scrollX) + 'px';
+      cloud.style.top = (top + window.scrollY) + 'px';
+    }
     cloud.style.setProperty('--tx', Math.min(Math.max(cx - left, 28), w - 28) + 'px');
   }
   function open(btn, pin){
